@@ -127,7 +127,7 @@ html, body {
     border-bottom:0;
   }
 
-span{
+.linethrough{
   text-decoration: line-through;
 }
   input:checked + p {

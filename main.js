@@ -33,11 +33,14 @@ $('body').on('click', '.glyphicon-star', function() {// this line of codes uses 
 const checkboxes =document.querySelectorAll('input[type="checkbox"]');
 
 let lastChecked;
+$('.list').on("click", 'input[type="checkbox"]',function(){
+$(this).siblings("span").toggleClass('linethrough');
+})
 
 $('.list').on("click", 'input[type="checkbox"]',function handleCheck(e) {
   // Check if they had the shift key down
   // AND check that they are checking it
-  $(this).toggleClass('linethrough');
+
   let inBetween = false;
   if (e.shiftKey && this.checked) {
     // go ahead and do what we please
