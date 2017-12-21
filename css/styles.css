@@ -127,7 +127,9 @@ html, body {
     border-bottom:0;
   }
 
-
+span{
+  text-decoration: line-through;
+}
   input:checked + p {
     background:#F9F9F9;
     text-decoration: line-through;

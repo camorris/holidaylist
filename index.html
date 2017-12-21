@@ -5,10 +5,9 @@
   <title>Hold Shift to Check Multiple Checkboxes</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
-  <script src='main.js'></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-</head>
 
+  </head>
 <body>
 
    <!--
@@ -53,30 +52,6 @@
     </div>
   </div>
  </div>
-
-<script>
-const checkBoxes = document.querySelectorAll('.inbox input[type="checkbox"]');
-
- let lastChecked;
-
-function handleCheck(e){
-  let inBetween = false;
-    if(e.shiftKey && this.checked){
-      checkBoxes.forEach(checkbox => {
-        if(checkbox === this || checkbox === lastChecked) {
-          inBetween = !inBetween;
-        }
-        if(inBetween){
-          checkbox.checked = true;
-        }
-      });
-}
-  lastChecked = this;
-}
-
-
-
-checkBoxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck))
-</script>
+<script src='main.js'></script>
 </body>
 </html>

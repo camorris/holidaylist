@@ -18,15 +18,6 @@ $('.form').on('submit', function(evt){//this line of using a function to create 
     $newPSpan.text($('#todo').val())//this line of code uses the  jQuery method '.val()' to add the input of id tag 'todo' to the text of the newPSpan variable by using the method '.text()'
     $('#todo').val('')//this will clear the input box with the id 'todo' and set the value to empty once the item has been submitted
 })
-// adds strikethrough
-
-$('.list').on("click", 'input[type="checkbox"]', function() {//this line of code specifically adds a event listener 'click', to the class 'list' through the jQuery method '.on()'. the 'input[type="checkbox"]' specifically selects that line of html to have this event listener
-    $(this).siblings("span").css("text-decoration", "line-through")//this line of code adds the css properties through the jQuery method '.css()' to all the tags within the parent 'p' tag In a function, there is a local variable called this. It is scoped to the function, but in the context of the owner object, and if none is specified, that object is window.
-
-})
-
-
-
 
 // // LOOK AT LINE 18 The input field needs to be cleared to allow him to type another todo.
 // // Bonus: Animate the todo item fading in or sliding down as you're adding it to the DOM.
@@ -38,3 +29,33 @@ $('body').on('click', '.glyphicon-remove', function(){// this line of code uses 
 $('body').on('click', '.glyphicon-star', function() {// this line of codes uses a event listener for the class glyphicon-star. '$('body') makes sure that the event is selected
     $(this).toggleClass('active')//this line of code uses the method ('.toggleClass()') to Add or remove one or more classes from each element in the set of matched elements, depending on either the class's presence or the value of the state argument. 'active' is the name of a class in the css
 })
+
+const checkboxes =document.querySelectorAll('input[type="checkbox"]');
+
+let lastChecked;
+
+$('.list').on("click", 'input[type="checkbox"]',function handleCheck(e) {
+  // Check if they had the shift key down
+  // AND check that they are checking it
+  $(this).toggleClass('linethrough');
+  let inBetween = false;
+  if (e.shiftKey && this.checked) {
+    // go ahead and do what we please
+    // loop over every single checkbox
+    checkboxes.forEach(checkbox => {
+      console.log(checkbox);
+      if (checkbox === this || checkbox === lastChecked) {
+        inBetween = !inBetween;
+        console.log('STarting to check them inbetween!');
+      }
+
+      if (inBetween) {
+        checkbox.checked = true;
+      }
+    });
+  }
+
+  lastChecked = this;
+})
+
+// checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
