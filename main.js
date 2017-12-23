@@ -4,6 +4,7 @@
 var $addButton = $('.btn')// this line of code sets the variable $addButton to the class btn using a jquery selector
 var $toDo = $('#todo')// this line of code sets the variable $toDo to the  id todo using a jquery selector
 var $list = $('.list')// this line of code sets the class list by using a jquery selector to the variable $list
+var span = document.getElementsByTagName("span")
 
 
 
@@ -30,35 +31,39 @@ $('body').on('click', '.glyphicon-star', function() {// this line of codes uses 
     $(this).toggleClass('active')//this line of code uses the method ('.toggleClass()') to Add or remove one or more classes from each element in the set of matched elements, depending on either the class's presence or the value of the state argument. 'active' is the name of a class in the css
 })
 
-const checkboxes =document.querySelectorAll('input[type="checkbox"]');
-
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+const spans = document.querySelectorAll('span');
 let lastChecked;
-$('.list').on("click", 'input[type="checkbox"]',function(){
-$(this).siblings("span").toggleClass('linethrough');
-})
+
 
 $('.list').on("click", 'input[type="checkbox"]',function handleCheck(e) {
   // Check if they had the shift key down
   // AND check that they are checking it
+  var span = document.getElementsByTagName("span");
+
 
   let inBetween = false;
   if (e.shiftKey && this.checked) {
     // go ahead and do what we please
     // loop over every single checkbox
     checkboxes.forEach(checkbox => {
-      console.log(checkbox);
-      if (checkbox === this || checkbox === lastChecked) {
+        if (checkbox === this || checkbox === lastChecked) {
         inBetween = !inBetween;
-        console.log('STarting to check them inbetween!');
+
+        console.log(checkbox);
+
       }
+
 
       if (inBetween) {
         checkbox.checked = true;
+      $('span').css("text-decoration","line-through");
+        console.log(span);
       }
-    });
-  }
 
+    });
+
+  }
+$(this).siblings("span").toggleClass('linethrough');
   lastChecked = this;
 })
-
-// checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
