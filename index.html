@@ -6,50 +6,56 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
   </head>
 <body>
-
    <!--
+
    The following is a common layout you would see in an email client.
 
    When a user clicks a checkbox, holds Shift, and then clicks another checkbox a few rows down, all the checkboxes inbetween those two checkboxes should be checked.
 
  -->
+ <div class="navbar">
+   <nav>
+     <ul>
+        <li><a href="index.html">ToDo List</a></li>
+        <li><a href="home/index.html">Home</a></li>
+     </ul>
+   </nav>
+ </div>
  <div class="main">
   <div class="list">
 
       <p>
         <input type="checkbox">
           <i class="glyphicon glyphicon-star"></i>
-        <span>Everything inbetween should also be set to checked</span>
+        <span>Go christmas gift shopping</span>
         <i class="glyphicon glyphicon-remove"></i>
     </p>
     <p>
       <input type="checkbox">
         <i class="glyphicon glyphicon-star"></i>
-      <span>Everything inbetween should also be set to checked</span>
+      <span>Pick-up Nana from the airport</span>
       <i class="glyphicon glyphicon-remove"></i>
   </p>
   <p>
     <input type="checkbox">
       <i class="glyphicon glyphicon-star"></i>
-    <span>Everything inbetween should also be set to checked</span>
+    <span>Put up Christmas lights</span>
     <i class="glyphicon glyphicon-remove"></i>
 </p>
 <p>
   <input type="checkbox">
     <i class="glyphicon glyphicon-star"></i>
-  <span>Everything inbetween should also be set to checked</span>
+  <span>Bring eggnog to office christmas party</span>
   <i class="glyphicon glyphicon-remove"></i>
 </p>
-      <form class="form">
-              <div class="form-container">
-                <input id="todo" type="text checkbox" class="form-input" placeholder="Add item">
-
-              <button type="submit" class="btn">+</button>
-            </form>
-    </div>
+<form class="form">
+  <div class="form-container">
+    <input id="todo" type="text checkbox" class="form-input" placeholder="Add item">
+    <button type="submit" class="btn">+</button>
+  </div>
+</form>
   </div>
  </div>
 <script src='main.js'></script>

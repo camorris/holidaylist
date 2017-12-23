@@ -4,10 +4,6 @@
 var $addButton = $('.btn')// this line of code sets the variable $addButton to the class btn using a jquery selector
 var $toDo = $('#todo')// this line of code sets the variable $toDo to the  id todo using a jquery selector
 var $list = $('.list')// this line of code sets the class list by using a jquery selector to the variable $list
-var span = document.getElementsByTagName("span")
-
-
-
 
 
 $('.form').on('submit', function(evt){//this line of using a function to create a submit event with the jQuery method '.on()' for the class 'form'
@@ -32,38 +28,24 @@ $('body').on('click', '.glyphicon-star', function() {// this line of codes uses 
 })
 
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-const spans = document.querySelectorAll('span');
 let lastChecked;
 
 
 $('.list').on("click", 'input[type="checkbox"]',function handleCheck(e) {
+  let inBetween = false;
   // Check if they had the shift key down
   // AND check that they are checking it
-  var span = document.getElementsByTagName("span");
-
-
-  let inBetween = false;
-  if (e.shiftKey && this.checked) {
-    // go ahead and do what we please
-    // loop over every single checkbox
-    checkboxes.forEach(checkbox => {
-        if (checkbox === this || checkbox === lastChecked) {
-        inBetween = !inBetween;
-
-        console.log(checkbox);
-
-      }
-
-
-      if (inBetween) {
-        checkbox.checked = true;
-      $('span').css("text-decoration","line-through");
-        console.log(span);
-      }
-
+  if(e.shiftKey && this.checked) {
+    checkboxes.forEach(checkbox => {// loop over every single checkbox
+        if (checkbox === this || checkbox === lastChecked){
+          inBetween = !inBetween; // inBetween is the opposite of it original value false
+        }
+        if(inBetween){
+          checkbox.checked = true; // check all the checkboxes true
+          $('span').css("text-decoration","line-through"); //add the css properties to the span tags in between
+        }
     });
-
   }
-$(this).siblings("span").toggleClass('linethrough');
+  $(this).siblings("span").toggleClass('linethrough'); // add and remove the css class linethrough
   lastChecked = this;
-})
+});

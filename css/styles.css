@@ -1,54 +1,9 @@
  body {
-
     background-size: 350px 450px;
     font-family: 'Arvo', serif;
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-
-  }
-
-
-
-  h1 {
-    color: #473e39;
-    font-weight: 400;
-    margin: 0;
-    padding: 20px 0;
-    text-align: center;
-  }
-
-  .main {
-    padding: 120px 0 0 0;
-    width: 100%;
-  }
-
-  .list p {
-
-    box-shadow: 0 2px 2px rgba(0,0,0,.15);
-    color: #473e39;
-    font-size: 16px;
-    margin: 0 auto 5px;
-    padding: 20px;
-    width: 520px;
-  }
-
-  .list p .glyphicon-star {
-    cursor: pointer;
-    margin: 0 10px 0 10px;
-  }
-
-  .list p .glyphicon-star:hover, .list p .active {
-    color: #ffcc00;
-  }
-
-  .list p .glyphicon-remove {
-    cursor: pointer;
-    float: right;
-  }
-
-  .list p .glyphicon-remove:hover {
-    color: #ed1c24;
   }
 
   form.form {
@@ -101,7 +56,13 @@
     cursor: pointer;
   }
 
-
+  h1 {
+    color: #473e39;
+    font-weight: 400;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+  }
 
   .inbox {
     max-width:400px;
@@ -121,10 +82,6 @@
     border-bottom:0;
   }
 
-.linethrough{
-  text-decoration: line-through;
-}
-
 
   input:checked + p {
     background:#F9F9F9;
@@ -134,8 +91,48 @@
   input[type="checkbox"] {
     margin:20px;
   }
+  .linethrough{
+    text-decoration: line-through;
+  }
+  .list p {
 
-  p {
+    box-shadow: 0 2px 2px rgba(0,0,0,.15);
+    color: #473e39;
+    font-size: 16px;
+    margin: 0 auto 5px;
+    padding: 20px;
+    width: 520px;
+  }
+
+  .list p .glyphicon-star {
+    cursor: pointer;
+    margin: 0 10px 0 10px;
+  }
+
+  .list p .glyphicon-star:hover, .list p .active {
+    color: #ffcc00;
+  }
+
+  .list p .glyphicon-remove {
+    cursor: pointer;
+    float: right;
+  }
+
+  .list p .glyphicon-remove:hover {
+    color: #ed1c24;
+  }
+
+  li{
+    display: inline-block;
+    margin-right: 20px;
+    float: right;
+  }
+  .main {
+    padding: 120px 0 0 0;
+    width: 100%;
+  }
+
+  p{
     margin:0;
     padding:20px;
     transition:background 0.2s;
@@ -144,5 +141,11 @@
     font-size: 20px;
     font-weight: 200;
     border-left: 1px solid #D1E2FF;
-        border-top: 1px solid #D1E2ff;
+    border-top: 1px solid #D1E2ff;
+  }
+
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
   }
