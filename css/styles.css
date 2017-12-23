@@ -1,3 +1,8 @@
+a{
+  color: white;
+  list-style-type: none;
+}
+
  body {
     background-size: 350px 450px;
     font-family: 'Arvo', serif;
@@ -57,15 +62,23 @@
   }
 
   .header{
-    background-color: rgba(255,0,0,0.9);
+    background: linear-gradient(to bottom right,#cb2d3e,#ef473a);
+    box-shadow: 10px 5px 5px lightgrey;
+    padding: 60px;
+    width: 86%;
+    margin: 0 auto;
+    margin-top: 19px;
   }
   h1 {
-    color: #473e39;
+    color: white;
     font-weight: 400;
+    font-size: 70px;
     margin: 0;
     padding: 20px 0;
     text-align: center;
     font-family: 'playball', cursive !important;
+    text-shadow: 5px 5px 10px black;
+    margin-bottom:-113px;
   }
 
   .inbox {
@@ -130,6 +143,7 @@
     display: inline-block;
     margin-right: 20px;
     float: right;
+    color: white;
   }
   .main {
     padding: 120px 0 0 0;
