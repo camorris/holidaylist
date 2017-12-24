@@ -1,6 +1,7 @@
 a{
   color: white;
   list-style-type: none;
+  text-decoration: none;
 }
 
  body {
@@ -74,6 +75,7 @@ a{
     width: 86%;
     margin: 0 auto;
     margin-top: 19px;
+    border-radius: 5px 5px 0px 0px;
   }
   h1 {
     color: white;
@@ -106,7 +108,7 @@ a{
   }
 
 
-  input:checked + p {
+  input:checked + text {
     background:#F9F9F9;
     text-decoration: line-through;
   }
@@ -117,7 +119,7 @@ a{
   .linethrough{
     text-decoration: line-through;
   }
-  .list p {
+  .list text {
 
     box-shadow: 0 2px 2px rgba(0,0,0,.15);
     color: #473e39;
@@ -127,21 +129,21 @@ a{
     width: 520px;
   }
 
-  .list p .glyphicon-star {
+  .list text .glyphicon-star {
     cursor: pointer;
     margin: 0 10px 0 10px;
   }
 
-  .list p .glyphicon-star:hover, .list p .active {
+  .list text .glyphicon-star:hover, .list text .active {
     color: #ffcc00;
   }
 
-  .list p .glyphicon-remove {
+  .list text .glyphicon-remove {
     cursor: pointer;
     float: right;
   }
 
-  .list p .glyphicon-remove:hover {
+  .list text .glyphicon-remove:hover {
     color: #ed1c24;
   }
 
@@ -158,16 +160,14 @@ a{
 
   p{
     margin:0;
-    padding:20px;
+    padding:100px;
     transition:background 0.2s;
     flex:1;
     font-family:'helvetica neue';
     font-size: 20px;
     font-weight: 200;
-    border-left: 1px solid #cb2d3e;
-    border-top: 1px solid #cb2d3e;
   }
-  p:hover{
+  text:hover{
     transform: scale(1.05);
   }
 
@@ -175,6 +175,16 @@ a{
       content: "";
       display: table;
       clear: both;
+  }
+  text{
+    margin:0;
+    padding:20px;
+    transition:background 0.2s;
+    flex:1;
+    font-family:'helvetica neue';
+    font-size: 20px;
+    font-weight: 200;
+    display:block;
   }
   ul{
     list-style-type: none;
