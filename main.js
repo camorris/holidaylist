@@ -8,7 +8,7 @@ var $list = $('.list')// this line of code sets the class list by using a jquery
 
 $('.form').on('submit', function(evt){//this line of using a function to create a submit event with the jQuery method '.on()' for the class 'form'
     evt.preventDefault()// the method '.preventDefault()' stops all default settings for uploaded pages...what about evt
-    $list.prepend('<p>')// this line code creates new p tags and prepends it to the top of the list variable. the method '.prepend()' places set elements to the top of a selected content
+    $list.prepend('<text>')// this line code creates new p tags and prepends it to the top of the list variable. the method '.prepend()' places set elements to the top of a selected content
     var $newP = $('p:first')//this line of code makes sure all new paragraphs typed are first and placed in the variable $newP
     $newP.append('<input type="checkbox">').append('<i class="glyphicon glyphicon-star">').append('<span>').append('<i class="glyphicon glyphicon-remove">')//this line of codes makes sure all created paragraphs tags have the pre wrote CSS appended to them
     var $newPSpan = $('span:first')// this line of code makes sure all new span tags are the first and shortcuted to the variable newPSpan

@@ -10,6 +10,12 @@ a{
     padding: 0;
     font-family: sans-serif;
   }
+  .column {
+    float: left;
+    width: 50%;
+}
+
+
 
   form.form {
     color: #473e39;
@@ -158,10 +164,18 @@ a{
     font-family:'helvetica neue';
     font-size: 20px;
     font-weight: 200;
-    border-left: 1px solid #D1E2FF;
-    border-top: 1px solid #D1E2ff;
+    border-left: 1px solid #cb2d3e;
+    border-top: 1px solid #cb2d3e;
+  }
+  p:hover{
+    transform: scale(1.05);
   }
 
+  .row:after {
+      content: "";
+      display: table;
+      clear: both;
+  }
   ul{
     list-style-type: none;
     margin: 0;
