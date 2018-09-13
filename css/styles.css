@@ -68,7 +68,7 @@ a{
 		cursor: pointer;
 	}
 
-	.header{
+	 .header{
 		background: linear-gradient(to bottom right,#cb2d3e,#ef473a);
 		box-shadow: 10px 5px 5px lightgrey;
 		padding: 60px;
@@ -76,7 +76,7 @@ a{
 		margin: 0 auto;
 		margin-top: 19px;
 		border-radius: 5px 5px 0px 0px;
-	}
+	} 
 	h1 {
 		color: white;
 		font-weight: 400;
@@ -119,12 +119,12 @@ a{
 	.linethrough{
 		text-decoration: line-through;
 	}
-	.list{
+	/* .list{
 		background: linear-gradient(to bottom right,#cb2d3e,#ef473a);
 		width: 600px;
 		margin: 0 auto;
 		padding: 40px;
-	}
+	} */
 	.list text {
 		box-shadow: 0 2px 2px rgba(0,0,0,.15);
 		color: #473e39;
